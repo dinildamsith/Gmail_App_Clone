@@ -1,15 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import MainPage from '../Pages/MainPage/index';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
+
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{ fontSize: 24, fontWeight: 'bold' }}>Hello, Tailwind CSS!</Text>
-    </View>
+    
+      <MainPage/>
+    
   );
 }
 
-const styless = StyleSheet.create({
-  mainView:{
-    marginTop:70
-  }
-})

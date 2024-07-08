@@ -3,6 +3,7 @@ import { StyleSheet, View, TextInput, Image, ScrollView, Text, KeyboardAvoidingV
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Dimensions } from 'react-native';
+import MassageBox from "@/components/massageBox";
 
 export default function Index() {
   const [text, onChangeText] = React.useState("");
@@ -16,7 +17,7 @@ export default function Index() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
         {/* <ScrollView contentContainerStyle={{ flexGrow: 1 }}> */}
-          <View style={{ width: windowWidth, height: windowHeight }}>
+          <View style={{ width: windowWidth, height: windowHeight,backgroundColor:'#fffefe' }}>
             
 
             {/* Top Area */}
@@ -37,13 +38,26 @@ export default function Index() {
 
 
             {/* -----BottamArea----- */}
-            <View>
-              <Text>Hiii</Text>
+            <View style={{marginTop:20,marginLeft:27}}>
+              <Text style={{color:'#767777',fontWeight:600}}>inbox</Text>
+              <ScrollView>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              <MassageBox/>
+              </ScrollView>
             </View>
 
 
             {/* Footer */}
-            <View style={{ position: 'absolute', bottom: 9, width: windowWidth, height: 65, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20 }}>
+            <View style={{ position: 'absolute', bottom: 9, width: windowWidth, height: 65, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20,backgroundColor:'#fffefe' }}>
               <Image
                 source={{ uri: "https://img.icons8.com/material-rounded/24/mail.png" }}
                 style={{ width: 35, height: 35, borderRadius: 17.5 ,position:'absolute', left:120}}

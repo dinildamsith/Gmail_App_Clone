@@ -38,10 +38,10 @@ export default function Index() {
 
 
             {/* -----BottamArea----- */}
-            <View style={{marginTop:20,marginLeft:27}}>
+            <View style={{marginTop:20,marginLeft:17}}>
               <Text style={{color:'#767777',fontWeight:600}}>inbox</Text>
               <ScrollView>
-              <MassageBox/>
+              <MassageBox from='AliExpress' date='8.59PM' subject='Your free shipping deal' massage='Up to 50 off %'/>
               <MassageBox/>
               <MassageBox/>
               <MassageBox/>

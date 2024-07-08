@@ -41,7 +41,7 @@ export default function Index() {
             <View style={{marginTop:20,marginLeft:17}}>
               <Text style={{color:'#767777',fontWeight:600}}>inbox</Text>
               <ScrollView>
-              <MassageBox from='AliExpress' date='8.59PM' subject='Your free shipping deal' massage='Up to 50 off %'/>
+              <MassageBox profilePic='https://cdn-icons-png.freepik.com/512/8345/8345328.png' from='AliExpress' date='8.59PM' subject='Your free shipping deal' massage='Up to 50 off %'/>
               <MassageBox/>
               <MassageBox/>
               <MassageBox/>

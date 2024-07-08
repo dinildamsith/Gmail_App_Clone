@@ -11,7 +11,7 @@ export default function MassageBox(props:any){
         <View style={{marginTop:15}}>
             <View style={{width:windowWidth-28,height:70}}>
             <Image
-                source={{ uri: "https://cdn-icons-png.freepik.com/512/8345/8345328.png" }}
+                source={{ uri: props.profilePic }}
                 style={{ width: 50, height: 50, borderRadius: 17.5,marginTop:10}}
               />
     

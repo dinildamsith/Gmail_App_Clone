@@ -12,13 +12,13 @@ export default function MassageBox(props:any){
             <View style={{width:windowWidth-28,height:70}}>
             <Image
                 source={{ uri: props.profilePic }}
-                style={{ width: 50, height: 50, borderRadius: 17.5,marginTop:10}}
+                style={{ width: 49, height: 49, borderRadius: 80.5,marginTop:10}}
               />
     
                   <Text style={{position:'absolute',left:62,top:12,fontWeight:'bold',fontSize:15,lineHeight: 20}}>{props.from}</Text>
                   <Text style={{position:'absolute',right:9,top:12,fontWeight:'bold',fontSize:13}}>{props.date}</Text> 
-                  <Text style={{position:'absolute',left:62,top:30,fontWeight:'500',fontSize:12}}>{props.subject}</Text>
-                  <Text style={{position:'absolute',left:62,top:47,fontWeight:'300',color:'#686869',fontSize:12}}>{props.massage}</Text>
+                  <Text style={{position:'absolute',left:62,top:30,fontWeight:'500',fontSize:12,}}>{props.subject}</Text>
+                  <Text style={{position:'absolute',left:62,top:47,fontWeight:'300',color:'#686869',fontSize:12,width:200}} numberOfLines={1} ellipsizeMode="tail" >{props.massage}</Text>
         
                   <Image
                 source={{ uri: "https://img.icons8.com/forma-bold/24/star.png" }}

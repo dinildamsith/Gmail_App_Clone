@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, TextInput, Image, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
 import { SafeAreaView } from 'react-native-safe-area-context';
 import MassageBox from '@/components/massageBox';
 import { Dimensions } from 'react-native';
 import SearchBar from '@/components/searchBar';
+
 
 
 export default function MainPage() {
@@ -13,6 +12,7 @@ export default function MainPage() {
   
   const windowHeight = Dimensions.get('window').height;
   const windowWidth = Dimensions.get('window').width;
+  
   
 
   
@@ -22,6 +22,7 @@ export default function MainPage() {
       
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"}>
         {/* <ScrollView contentContainerStyle={{ flexGrow: 1 }}> */}
+         
           <View style={{ width: windowWidth, height: windowHeight,backgroundColor:'#fffefe' }}>
        
 
@@ -66,7 +67,6 @@ export default function MainPage() {
                 style={{ width: 35, height: 35, borderRadius: 17.5,position:'absolute', right:120}}
               />
             </View>
-
           </View>
          
         {/* </ScrollView> */}

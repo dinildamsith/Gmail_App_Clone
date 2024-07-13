@@ -1,8 +1,11 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import MainPage from '@/Pages/MainPage';
-import Tt from '@/Pages/tt/tt';
+import ShowAccounts from '@/components/accountsShowWindow';
+
 
 
 
@@ -10,13 +13,33 @@ export default function App() {
 
 const Drawer = createDrawerNavigator();
   return (
-      <Drawer.Navigator initialRouteName="MainPage" screenOptions={{ headerShown: false,}}>
-            <Drawer.Screen name="MainPage" component={MainPage} />
-            <Drawer.Screen name="Tt" component={Tt} />
+
+
+      <Drawer.Navigator initialRouteName="MainPage"  screenOptions={{ headerShown: false}}>
+          <Drawer.Screen name="Gmail" component={MainPage} options={{title: 'Gmail',headerTitleStyle: styles.headerTitleStyle,drawerLabelStyle: styles.drawerLabelStyle,drawerItemStyle: styles.disabledItem }} />
+          <Drawer.Screen name="Inboxes" component={MainPage} options={{title: 'All Inboxes',drawerIcon: () => (<Icon name="inbox" size={20} color="#000" />)}}/>
+          {/* <Drawer.Screen name="acc" component={ShowAccounts} options={{title: 'acc',drawerIcon: () => (<Icon name="inbox" size={20} color="#000" />)}}/> */}
        </Drawer.Navigator>
+
+
   );
 }
 
+const styles = StyleSheet.create({
+  headerTitleStyle: {
+    fontWeight: 'bold',
+    fontSize: 24,
+    color: 'blue',
+  },
+  drawerLabelStyle: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    color: 'red',
+  },
+  disabledItem: {
+    pointerEvents: 'none', // Disables touch events
+  },
+})
 
 
 

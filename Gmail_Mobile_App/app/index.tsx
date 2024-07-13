@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet , Image} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import MainPage from '@/Pages/MainPage';
-import ShowAccounts from '@/components/accountsShowWindow';
-
+import ImportantPage from '@/Pages/ImportantPage'
 
 
 
@@ -14,10 +13,19 @@ export default function App() {
 const Drawer = createDrawerNavigator();
   return (
 
+    
 
       <Drawer.Navigator initialRouteName="MainPage"  screenOptions={{ headerShown: false}}>
           <Drawer.Screen name="Gmail" component={MainPage} options={{title: 'Gmail',headerTitleStyle: styles.headerTitleStyle,drawerLabelStyle: styles.drawerLabelStyle,drawerItemStyle: styles.disabledItem }} />
           <Drawer.Screen name="Inboxes" component={MainPage} options={{title: 'All Inboxes',drawerIcon: () => (<Icon name="inbox" size={20} color="#000" />)}}/>
+          <Drawer.Screen name="Important"component={ImportantPage} options={{title: 'Important', drawerIcon: () => (<Image
+          source={{ uri: "https://img.icons8.com/windows/32/bookmark-ribbon--v1.png" }}
+          style={{ width: 24, height: 24,marginLeft:-3, transform: [{ rotate: '270deg' }] }}
+          />
+    ),
+  }}
+/>
+
           {/* <Drawer.Screen name="acc" component={ShowAccounts} options={{title: 'acc',drawerIcon: () => (<Icon name="inbox" size={20} color="#000" />)}}/> */}
        </Drawer.Navigator>
 

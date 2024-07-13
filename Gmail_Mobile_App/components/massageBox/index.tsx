@@ -14,7 +14,7 @@ export default function MassageBox(props:any){
                 source={{ uri: props.profilePic }}
                 style={{ width: 49, height: 49, borderRadius: 80.5,marginTop:10}}
               />
-    
+
                   <Text style={{position:'absolute',left:62,top:12,fontWeight:'bold',fontSize:15,lineHeight: 20}}>{props.from}</Text>
                   <Text style={{position:'absolute',right:9,top:12,fontWeight:'bold',fontSize:13}}>{props.date}</Text> 
                   <Text style={{position:'absolute',left:62,top:30,fontWeight:'500',fontSize:12,}}>{props.subject}</Text>

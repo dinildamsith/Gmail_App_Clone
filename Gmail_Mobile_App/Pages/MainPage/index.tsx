@@ -18,21 +18,24 @@ export default function MainPage() {
   
   return (
 
+    <>
+
     <SafeAreaView style={{ flex: 1 }}>
       
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"}>
         {/* <ScrollView contentContainerStyle={{ flexGrow: 1 }}> */}
-         
+
           <View style={{ width: windowWidth, height: windowHeight,backgroundColor:'#fffefe' }}>
        
 
             {/* Top Area */}
             <SearchBar/>
+
  
 
 
             {/* -----BottamArea----- */}
-            <View style={{marginTop:20,marginLeft:17}}>
+            <View style={{marginTop:10,marginLeft:17}}>
               <Text style={{color:'#767777',fontWeight:600}}>inbox</Text>
               <ScrollView>
               <MassageBox profilePic='https://plasticfantasticdeals.com/wp-content/uploads/2023/04/PikPng.com_aliexpress-logo-png_3508940-150x150.png' from='AliExpress' date='8.59PM' subject='Your free shipping deal' massage='Up to 50 off %'/>
@@ -57,7 +60,7 @@ export default function MainPage() {
 
 
             {/* Footer */}
-            <View style={{ position: 'absolute', bottom: 30, width: windowWidth, height: 65, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20,backgroundColor:'#fffefe' }}>
+            <View style={{ position: 'absolute', bottom: 18, width: windowWidth, height: 65, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20,backgroundColor:'#fffefe' }}>
               <Image
                 source={{ uri: "https://img.icons8.com/material-rounded/24/mail.png" }}
                 style={{ width: 35, height: 35, borderRadius: 17.5 ,position:'absolute', left:120}}
@@ -68,10 +71,12 @@ export default function MainPage() {
               />
             </View>
           </View>
-         
+
         {/* </ScrollView> */}
       </KeyboardAvoidingView>
     </SafeAreaView>
+
+    </>
   );
 }
 

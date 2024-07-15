@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, TextInput, Image, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Image, ScrollView, KeyboardAvoidingView, Platform, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import MassageBox from '@/components/massageBox';
 import { Dimensions } from 'react-native';
@@ -7,7 +7,7 @@ import SearchBar from '@/components/searchBar';
 
 
 
-export default function MainPage() {
+export default function MainPage({ navigation }) {
 
   
   const windowHeight = Dimensions.get('window').height;
@@ -60,15 +60,21 @@ export default function MainPage() {
 
 
             {/* Footer */}
-            <View style={{ position: 'absolute', bottom: 18, width: windowWidth, height: 65, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20,backgroundColor:'#fffefe' }}>
+            <View style={{ position: 'absolute', bottom: 0, width: windowWidth, height: 85, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20,backgroundColor:'#fffefe' }}>
+            <TouchableOpacity style={null} onPress={() => navigation.navigate('Inboxes')}>
               <Image
                 source={{ uri: "https://img.icons8.com/material-rounded/24/mail.png" }}
-                style={{ width: 35, height: 35, borderRadius: 17.5 ,position:'absolute', left:120}}
+                style={{ width: 35, height: 35, borderRadius: 17.5 ,position:'absolute', left:-132,bottom:0}}
               />
-              <Image
+           </TouchableOpacity>
+           <TouchableOpacity style={null} onPress={() => navigation.navigate('MeetPage')}>
+           <Image 
                 source={{ uri: "https://img.icons8.com/color/48/000000/google-meet--v1.png" }}
-                style={{ width: 35, height: 35, borderRadius: 17.5,position:'absolute', right:120}}
+                style={{ width: 35, height: 35, borderRadius: 17.5,position:'absolute', right:-132,bottom:0}}
               />
+           </TouchableOpacity>
+
+  
             </View>
           </View>
 

@@ -28,7 +28,9 @@ const Drawer = createDrawerNavigator();
           <Drawer.Screen name="All lables" component={MeetPage} options={{drawerItemStyle: styles.disabledItem}}/>
           <Drawer.Screen name="Starred" component={StarredPage} options={{title: 'Starred',drawerIcon: () => (<Icon name="star" size={20} color="#000" />)}}/>
           <Drawer.Screen name="Snoozed" component={SnoozedPage} options={{title: 'Snoozed',drawerIcon: () => (<Icon name="circle" size={20} color="#000" />)}}/>
-
+          <Drawer.Screen name="Important2"component={ImportantPage} options={{title: 'Important', drawerIcon: () => (<Image
+          source={{ uri: "https://img.icons8.com/windows/32/bookmark-ribbon--v1.png" }}
+          style={{ width: 24, height: 24,marginLeft:-3, transform: [{ rotate: '270deg' }] }}/>  ),}}/>
 
 
 

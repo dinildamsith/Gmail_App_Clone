@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, TextInput, Image, ScrollView, KeyboardAvo
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Dimensions } from 'react-native';
 import SearchBar from '@/components/searchBar';
+import ComposeButton from '@/components/composeBtn';
 
 
 
@@ -27,6 +28,7 @@ export default function SnoozedPage({ navigation }) {
           <View style={{ width: windowWidth, height: windowHeight,backgroundColor:'#fffefe' }}>
        
 
+            <ComposeButton/>
             {/* Top Area */}
             <SearchBar/>
 

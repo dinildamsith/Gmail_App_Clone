@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import ImportantMgBox from '@/components/massageBox/importatntMgBox';
 import { Dimensions } from 'react-native';
 import SearchBar from '@/components/searchBar';
+import ComposeButton from '@/components/composeBtn';
 
 
 
@@ -27,7 +28,7 @@ export default function ImportantPage() {
 
           <View style={{ width: windowWidth, height: windowHeight,backgroundColor:'#fffefe' }}>
        
-
+           <ComposeButton />
             {/* Top Area */}
             <SearchBar/>
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, TextInput, Image, ScrollView, KeyboardAvoidingView, Platform, Pressable } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Image, ScrollView, KeyboardAvoidingView, Platform, Pressable,Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import MassageBox from '@/components/massageBox';
-import { Dimensions } from 'react-native';
 import SearchBar from '@/components/searchBar';
 import AnotherAcc from '@/components/anotherAcc';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -155,17 +154,20 @@ width: '100%',
             {/* -----BottamArea----- */}
        <View style={{position: 'absolute' ,marginTop: 10, marginLeft: 30, flexDirection: 'row', width: '100%', justifyContent: 'center', top:72 ,right:'0%' }}>
       
-             <Pressable style={{ alignItems: 'center', justifyContent: 'center', paddingVertical: 12, paddingHorizontal: 32, borderRadius: 25, elevation: 3, backgroundColor: '#0b57cf', width: '45%', marginRight: 2 }}>
+      <View style={{flexDirection:'row'}}>
+      <Pressable style={{ alignItems: 'center', justifyContent: 'center', paddingVertical: 12, paddingHorizontal: 32, borderRadius: 25, elevation: 3, backgroundColor: '#0b57cf', width: 200 , marginRight: 2 }}>
                  <Text style={{ fontSize: 16, lineHeight: 21, fontWeight: 'bold', letterSpacing: 0.25, color: 'white' }}>New meeting</Text>
              </Pressable>
       
-             <Pressable style={{ alignItems: 'center', justifyContent: 'center', paddingVertical: 12, paddingHorizontal: 32, borderRadius: 25, backgroundColor: 'white', width: '45%', marginLeft: 2, borderColor: 'black', borderWidth: 1.5 }}>
+             <Pressable style={{ alignItems: 'center', justifyContent: 'center', paddingVertical: 12, paddingHorizontal: 32, borderRadius: 25, backgroundColor: 'white', width: 200, marginLeft: 2, borderColor: 'black', borderWidth: 1.5 }}>
                 <Text style={{ fontSize: 16, lineHeight: 21, fontWeight: 'bold', letterSpacing: 0.25, color: '#0b57cf' }}>Join with a code</Text>
              </Pressable>
       
-            
-      
-            <Image source={require('../../assets/images/meet1.png')}
+      </View>
+
+        
+                  
+           <Image source={require('../../assets/images/meet1.png')}
             style={{
              position: 'absolute',
              alignSelf: 'center',
@@ -173,6 +175,8 @@ width: '100%',
 
             <Text style={{position:'absolute',alignSelf:'center',top:'710%',fontSize:26,fontWeight:'400'}}>Get a link you can share</Text>
             <Text style={{position:'absolute',left:'12%',right:'12%',top:'820%',fontSize:16,fontWeight:'420',  textAlign: 'center',color: '#555554' }}>Tap <Text style={{fontWeight:'bold'}}>New meeting</Text> to get a link you.can send to people you want to meet with</Text>
+
+        
 
             {/* <Image source={require('../../assets/images/meet2.png')}
             style={{

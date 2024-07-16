@@ -8,6 +8,7 @@ import ImportantPage from '@/Pages/ImportantPage'
 import MeetPage from '@/Pages/meetPage';
 import StarredPage from '@/Pages/starredPage';
 import SnoozedPage from '@/Pages/snoozedPage';
+import SentPage from '@/Pages/sentPage';
 
 
 
@@ -31,6 +32,7 @@ const Drawer = createDrawerNavigator();
           <Drawer.Screen name="Important2"component={ImportantPage} options={{title: 'Important', drawerIcon: () => (<Image
           source={{ uri: "https://img.icons8.com/windows/32/bookmark-ribbon--v1.png" }}
           style={{ width: 24, height: 24,marginLeft:-3, transform: [{ rotate: '270deg' }] }}/>  ),}}/>
+          <Drawer.Screen name="Sent" component={SentPage} options={{title: 'Sent',drawerIcon: () => (<Icon name="circle" size={20} color="#000" />)}}/>
 
 
 

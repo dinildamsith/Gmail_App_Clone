@@ -7,6 +7,7 @@ import MainPage from '@/Pages/MainPage';
 import ImportantPage from '@/Pages/ImportantPage'
 import MeetPage from '@/Pages/meetPage';
 import StarredPage from '@/Pages/starredPage';
+import SnoozedPage from '@/Pages/snoozedPage';
 
 
 
@@ -26,7 +27,7 @@ const Drawer = createDrawerNavigator();
           style={{ width: 24, height: 24,marginLeft:-3, transform: [{ rotate: '270deg' }] }}/>  ),}}/>
           <Drawer.Screen name="All lables" component={MeetPage} options={{drawerItemStyle: styles.disabledItem}}/>
           <Drawer.Screen name="Starred" component={StarredPage} options={{title: 'Starred',drawerIcon: () => (<Icon name="star" size={20} color="#000" />)}}/>
-
+          <Drawer.Screen name="Snoozed" component={SnoozedPage} options={{title: 'Snoozed',drawerIcon: () => (<Icon name="circle" size={20} color="#000" />)}}/>
 
 
 

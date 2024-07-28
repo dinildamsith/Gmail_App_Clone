@@ -9,6 +9,7 @@ import MeetPage from '@/Pages/meetPage';
 import StarredPage from '@/Pages/starredPage';
 import SnoozedPage from '@/Pages/snoozedPage';
 import SentPage from '@/Pages/sentPage';
+import MailReadView from '@/components/mailReadView';
 
 
 
@@ -39,10 +40,11 @@ const Drawer = createDrawerNavigator();
           <Drawer.Screen name="Sent" component={SentPage} options={{title: 'Sent',drawerIcon: () => (<Image
           source={{ uri: "https://img.icons8.com/material-outlined/24/000000/sent.png" }}
           style={{ width: 24, height: 24,marginLeft:-3 }}/>  ),}}/>
-
+        
 
 
           <Drawer.Screen name="MeetPage" component={MeetPage} options={{ drawerLabel: () => null }}/>
+          <Drawer.Screen name="MailReadView" component={MailReadView} options={{ drawerLabel: () => null }}/>
        </Drawer.Navigator>
 
 

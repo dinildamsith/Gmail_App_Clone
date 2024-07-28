@@ -1,4 +1,4 @@
-import { View, Text,Dimensions,Image} from "react-native";
+import { View, Text,Dimensions,Image,TouchableOpacity} from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function MassageBox(props:any){
@@ -8,6 +8,7 @@ export default function MassageBox(props:any){
 
     return(
 
+      <TouchableOpacity onPress={() => props.navigation.navigate('MailReadView')}>
         <View style={{marginTop:15}}>
             <View style={{width:windowWidth-28,height:70}}>
             <Image
@@ -27,6 +28,8 @@ export default function MassageBox(props:any){
                   
             </View>
         </View>
+      </TouchableOpacity>
+
 
     )
 }
